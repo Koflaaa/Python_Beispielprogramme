@@ -1,0 +1,40 @@
+Umrechnungsformel = "1 m/s = 3.6 km/h | 1 * 3.6 = 3.6"
+while True:
+    try:
+        auswahl = int(input("Wählen Sie aus:\n1.m/s zu km/s\n2.m/s zu km/h\n3.km/s zu m/s\n4.km/s zu km/h\n5.km/h zu m/s\n6.km/h zu km/s\nAuswahl: "))
+        match auswahl:
+            case 1:
+                print("m/s zu km/s")
+                ms = int(input("Geben Sie eine zahl in m/s ein, die sie zu km/s umwandeln möchten: "))
+                kms = ms/1000
+                print(f"{ms} m/s sind {kms} km/s.")     
+            case 2:
+                print("m/s zu km/h")
+                ms = int(input("Geben Sie eine zahl in m/s ein, die sie zu km/h umwandeln möchten: "))
+                kmh = ms*3.6
+                print(f"{ms} m/s sind {kmh} km/h.")
+            case 3:
+                print("km/s zu m/s")
+                kms = int(input("Geben Sie eine zahl in km/s ein, die sie zu m/s umwandeln möchten: "))
+                ms = kms*1000
+                print(f"{kms} km/s sind {ms} m/s.")
+            case 4:
+                print("km/s zu km/h")
+                kms = int(input("Geben Sie eine zahl in km/s ein, die sie zu km/h umwandeln möchten: "))
+                kmh = kms*3600
+                print(f"{kms} km/s sind {kmh} km/h.")
+            case 5:
+                print("km/h zu m/s")
+                kmh = int(input("Geben Sie eine zahl in km/h ein, die sie zu m/s umwandeln möchten: "))
+                ms = kmh/3.6
+                print(f"{kmh} km/h sind {ms} m/s.")
+            case 6:
+                print("km/h zu km/s")
+                kmh = int(input("Geben Sie eine zahl in km/h ein, die sie zu km/s umwandeln möchten: "))
+                kms = kmh/3600
+                print(f"{kmh} km/h sind {kms} km/s.")
+            case _:
+                print("Eingabe ungültig, bitte wählen Sie eine von den sieben genannten Optionen!")
+    except:
+        print("Eingabe ungültig, bitte wählen Sie eine von den sechs genannten Optionen!")
+        
